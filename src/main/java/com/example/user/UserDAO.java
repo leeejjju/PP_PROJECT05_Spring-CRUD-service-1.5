@@ -28,9 +28,9 @@ public class UserDAO {
     }
 
     //R
-    public UserVO getUser(int seq) {
+    public UserVO getUser(UserVO vo) {
         System.out.println("===> jdbcTemplate으로 getUser() 기능 처리");
-        return sqlSession.selectOne("UserDAO.getUser", seq);
+        return sqlSession.selectOne("UserDAO.getUser", vo);
     }
 
     //Rrrrr

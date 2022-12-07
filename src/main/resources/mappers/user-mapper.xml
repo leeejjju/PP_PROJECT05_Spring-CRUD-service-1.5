@@ -4,22 +4,28 @@
 
 <mapper namespace="UserDAO">
     <insert id="insertUser">
-        insert into MEMBER (userid, username, password)
+        insert into member (userid, username, userpw)
         values (#{userid}, #{username}, #{password})
     </insert>
     <update id="updateUser">
-        update MEMBER
-        set userid=#{userid}, password=#{password} where seq=#{seq}
+        update member
+        set userid=#{userid}, userpw=#{password} where seq=#{seq}
     </update>
     <delete id="deleteUser">
-        delete from MEMBER
+        delete from member
         where seq=#{seq}
     </delete>
-    <select id="getUser" resultType="User">
-        select * from MEMBER where seq=#{seq}
+
+    <!--for login check-->
+    <select id="getUser" resultType="user">
+        select userid, username from member
+        <!--where userid = #{userid} and userpw = password(#{password})-->
+        where userid = #{userid} and userpw = #{password}
     </select>
-    <select id="getUserList" resultType="User">
-        select * from MEMBER order by seq desc
+
+
+    <select id="getUserList" resultType="user">
+        select * from member order by seq desc
     </select>
 
     <!--

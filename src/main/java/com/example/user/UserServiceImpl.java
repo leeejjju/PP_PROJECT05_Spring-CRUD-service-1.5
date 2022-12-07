@@ -11,19 +11,19 @@ public class UserServiceImpl{
     @Autowired
     UserDAO userDAO;
 
-    public int insertBoard(UserVO vo) {
+    public int insertUser(UserVO vo) {
         return userDAO.insertUser(vo);
     }
-    public int deleteBoard(int seq) {
+    public int deleteUser(int seq) {
         return userDAO.deleteUser(seq);
     }
-    public int updateBoard(UserVO vo) {
+    public int updateUser(UserVO vo) {
         return userDAO.updateUser(vo);
     }
-    public UserVO getBoard(int seq) {
-        return userDAO.getUser(seq);
+    public UserVO getUser(UserVO vo) {
+        return userDAO.getUser(vo);
     }
-    public List<UserVO> getBoardList() {
+    public List<UserVO> getUserList() {
         return userDAO.getUserList();
     }
 
