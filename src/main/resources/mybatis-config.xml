@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!--Properties file setting
+    <properties resource="db.properties" />-->
+    <!--Alias setting -->
+    <typeAliases>
+        <!--뒤에 패키지, 경로를 board라는 이름으로 mapper에서 사용할 수 있게 해주는겨-->
+        <typeAlias alias="board" type="com.example.board.BoardVO" />
+        <typeAlias alias="user" type="com.example.user.UserVO" />
+    </typeAliases >
+    <!--Data Source setting
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driverClassName}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>-->
+    <!--SQL Mapper setting
+    <mappers>
+        <mapper resource="mappers/board-mapper.xml/" />
+    </mappers>-->
+
+</configuration>
