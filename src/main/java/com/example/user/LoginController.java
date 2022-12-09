@@ -39,6 +39,7 @@ public class LoginController {
             System.out.println("login ok!");
             session.setAttribute("login", loginvo);
             returnURL = "redirect:/board/list";
+
         }else{
             System.out.println("login fail");
             returnURL = "redirect:/login/login";

@@ -18,6 +18,15 @@
         label{width: 130px}
         button{background-color: darkolivegreen; color: white; font-size: 15px}
     </style>
+
+    <script>
+        function loginCheck(id) {
+            var msg = "Move to next page...";
+            alert(msg);
+        }
+    </script>
+
+
 </head>
 <body>
 
@@ -34,7 +43,7 @@
                 <input type="password" name="password" />
             </div>
             <br>
-            <button type="submit">Login</button>
+            <button type="submit" onclick="loginCheck()">Login</button>
 
         </form>
         

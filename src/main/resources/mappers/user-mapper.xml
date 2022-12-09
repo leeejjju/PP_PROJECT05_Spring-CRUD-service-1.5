@@ -19,8 +19,7 @@
     <!--for login check-->
     <select id="getUser" resultType="user">
         select userid, username from member
-        <!--where userid = #{userid} and userpw = password(#{password})-->
-        where userid = #{userid} and userpw = #{password}
+        where userid = #{userid} and userpw = password(#{password})
     </select>
 
 
